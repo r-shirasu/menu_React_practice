@@ -1,6 +1,9 @@
 import "./Menu.scss";
+import { menudata } from "./Menudata";
 
 export const Menu = () => {
+  console.log(menudata);
+
   return (
     <div className="btn-container">
       <button type="button" className="filter-btn" data-id="all">
