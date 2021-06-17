@@ -22,20 +22,24 @@ export const Menu = () => {
         </button>
       </div>
       <div className="section">
-        <article className="menu-item">
-          <img
-            src={menudata[0].img}
-            className="photo"
-            alt={menudata[0].alt}
-          ></img>
-          <div className="item-info">
-            <header>
-              <h4 className="title">{menudata[0].title}</h4>
-              <h4 className="price">{menudata[0].price}</h4>
-            </header>
-            <p className="item-text">{menudata[0].desc}</p>
-          </div>
-        </article>
+        {menudata.map((menuArray, menuIndex) => {
+          return (
+            <article className="menu-item">
+              <img
+                src={menuArray.img}
+                className="photo"
+                alt={menuArray.alt}
+              ></img>
+              <div className="item-info">
+                <header>
+                  <h4 className="title">{menuArray.title}</h4>
+                  <h4 className="price">{menuArray.price}</h4>
+                </header>
+                <p className="item-text">{menuArray.desc}</p>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </>
   );
