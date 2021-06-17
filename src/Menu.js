@@ -23,7 +23,11 @@ export const Menu = () => {
       </div>
       <div className="section">
         <article className="menu-item">
-          <img src={menudata[0].img} alt={menudata[0].alt}></img>
+          <img
+            src={menudata[0].img}
+            className="photo"
+            alt={menudata[0].alt}
+          ></img>
           <div className="item-info">
             <header>
               <h4 className="title">{menudata[0].title}</h4>
