@@ -21,3 +21,56 @@
     color: white;
   }
 }
+
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
+
+  .menu-item {
+    display: grid;
+    gap: 1rem 2rem;
+    max-width: 25rem;
+
+    img {
+      display: block;
+    }
+
+    .photo {
+      object-fit: cover;
+      height: 200px;
+      border-radius: 0.5rem;
+      border: 0.25rem solid #c59d5f;
+    }
+  }
+
+  .item-info {
+    header {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.5px dotted hsl(210deg 22% 49%);
+
+      h4 {
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+        letter-spacing: 0.25rem;
+        font-weight: bold;
+      }
+
+      .title {
+      }
+
+      .price {
+        color: #c59d5f;
+      }
+    }
+
+    .item-text {
+      margin-bottom: 0;
+      padding-top: 1rem;
+    }
+  }
+}
