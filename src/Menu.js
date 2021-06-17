@@ -33,7 +33,7 @@ export const Menu = () => {
       <div className="section">
         {menudata.map((menuArray, menuIndex) => {
           return (
-            <article className="menu-item">
+            <article className="menu-item" key={`${menuArray}${menuIndex}`}>
               <img
                 src={menuArray.img}
                 className="photo"
