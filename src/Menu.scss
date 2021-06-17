@@ -1,3 +1,5 @@
+$gold: #c59d5f;
+
 .btn-container {
   margin-bottom: 4rem;
   display: flex;
@@ -5,19 +7,19 @@
 
   .filter-btn {
     background: transparent;
-    border-color: #c59d5f;
+    border-color: $gold;
     font-size: 1rem;
     text-transform: capitalize;
     margin: 0 0.5rem;
     letter-spacing: 1px;
     border-radius: 0.5rem;
     padding: 0.375rem 0.75rem;
-    color: #c59d5f;
+    color: $gold;
     cursor: pointer;
     transition: all 0.3s linear;
   }
   .filter-btn:hover {
-    background: #c59d5f;
+    background: $gold;
     color: white;
   }
 }
@@ -43,7 +45,7 @@
       object-fit: cover;
       height: 200px;
       border-radius: 0.5rem;
-      border: 0.25rem solid #c59d5f;
+      border: 0.25rem solid $gold;
     }
   }
 
@@ -64,7 +66,7 @@
       }
 
       .price {
-        color: #c59d5f;
+        color: $gold;
       }
     }
 
