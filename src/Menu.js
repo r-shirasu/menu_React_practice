@@ -2,13 +2,22 @@ import "./Menu.scss";
 import { menudata } from "./Menudata";
 
 export const Menu = () => {
+  const breakfastMenus = () => {
+    console.log("朝食");
+  };
+
   return (
     <>
       <div className="btn-container">
         <button type="button" className="filter-btn" data-id="all">
           all
         </button>
-        <button type="button" className="filter-btn" data-id="breakfast">
+        <button
+          type="button"
+          className="filter-btn"
+          data-id="breakfast"
+          onClick={breakfastMenus}
+        >
           breakfast
         </button>
         <button type="button" className="filter-btn" data-id="lunch">
