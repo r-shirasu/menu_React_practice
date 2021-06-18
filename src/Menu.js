@@ -27,7 +27,10 @@ export const Menu = () => {
   };
 
   const dinnerMenus = () => {
-    console.log("ディナー");
+    const dinner = menudata.filter(
+      (menuArray) => menuArray.category === "dinner"
+    );
+    setMenuItems(dinner);
   };
 
   return (
