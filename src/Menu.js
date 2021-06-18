@@ -26,6 +26,10 @@ export const Menu = () => {
     setMenuItems(shakes);
   };
 
+  const dinnerMenus = () => {
+    console.log("ディナー");
+  };
+
   return (
     <>
       <div className="btn-container">
@@ -41,7 +45,7 @@ export const Menu = () => {
         <button type="button" className="filter-btn" onClick={shakesMenus}>
           shakes
         </button>
-        <button type="button" className="filter-btn">
+        <button type="button" className="filter-btn" onClick={dinnerMenus}>
           dinner
         </button>
       </div>
