@@ -1,30 +1,40 @@
+import { useState } from "react";
 import "./Menu.scss";
 import { menudata } from "./Menudata";
 
 export const Menu = () => {
+  const [menuItems, setMenuItems] = useState(menudata);
+
+  const breakfastMenus = () => {
+    const breakfast = menudata.filter(
+      (menuArray) => menuArray.category === "breakfast"
+    );
+    setMenuItems(breakfast);
+  };
+
   return (
     <>
       <div className="btn-container">
-        <button type="button" className="filter-btn" data-id="all">
+        <button type="button" className="filter-btn">
           all
         </button>
-        <button type="button" className="filter-btn" data-id="breakfast">
+        <button type="button" className="filter-btn" onClick={breakfastMenus}>
           breakfast
         </button>
-        <button type="button" className="filter-btn" data-id="lunch">
+        <button type="button" className="filter-btn">
           lunch
         </button>
-        <button type="button" className="filter-btn" data-id="shakes">
+        <button type="button" className="filter-btn">
           shakes
         </button>
-        <button type="button" className="filter-btn" data-id="Dinner">
+        <button type="button" className="filter-btn">
           dinner
         </button>
       </div>
       <div className="section">
-        {menudata.map((menuArray, menuIndex) => {
+        {menuItems.map((menuArray, menuIndex) => {
           return (
-            <article className="menu-item">
+            <article className="menu-item" key={`${menuArray}${menuIndex}`}>
               <img
                 src={menuArray.img}
                 className="photo"
