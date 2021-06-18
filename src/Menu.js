@@ -33,10 +33,14 @@ export const Menu = () => {
     setMenuItems(dinner);
   };
 
+  const allMenus = () => {
+    console.log("オール");
+  };
+
   return (
     <>
       <div className="btn-container">
-        <button type="button" className="filter-btn">
+        <button type="button" className="filter-btn" onClick={allMenus}>
           all
         </button>
         <button type="button" className="filter-btn" onClick={breakfastMenus}>
