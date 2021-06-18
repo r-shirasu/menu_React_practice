@@ -12,6 +12,10 @@ export const Menu = () => {
     setMenuItems(breakfast);
   };
 
+  const lunchMenus = () => {
+    console.log("ランチ");
+  };
+
   return (
     <>
       <div className="btn-container">
@@ -21,7 +25,7 @@ export const Menu = () => {
         <button type="button" className="filter-btn" onClick={breakfastMenus}>
           breakfast
         </button>
-        <button type="button" className="filter-btn">
+        <button type="button" className="filter-btn" onClick={lunchMenus}>
           lunch
         </button>
         <button type="button" className="filter-btn">
