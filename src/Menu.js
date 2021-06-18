@@ -34,7 +34,10 @@ export const Menu = () => {
   };
 
   const allMenus = () => {
-    console.log("オール");
+    const all = menudata.map((menuArray) => {
+      return menuArray;
+    });
+    setMenuItems(all);
   };
 
   return (
