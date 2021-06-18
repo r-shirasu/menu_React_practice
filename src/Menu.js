@@ -5,32 +5,11 @@ import { menudata } from "./Menudata";
 export const Menu = () => {
   const [menuItems, setMenuItems] = useState(menudata);
 
-  const breakfastMenus = () => {
-    const breakfast = menudata.filter(
-      (menuArray) => menuArray.category === "breakfast"
+  const updateMenus = (category) => {
+    const update = menudata.filter(
+      (menuArray) => menuArray.category === category
     );
-    setMenuItems(breakfast);
-  };
-
-  const lunchMenus = () => {
-    const lunch = menudata.filter(
-      (menuArray) => menuArray.category === "lunch"
-    );
-    setMenuItems(lunch);
-  };
-
-  const shakesMenus = () => {
-    const shakes = menudata.filter(
-      (menuArray) => menuArray.category === "shakes"
-    );
-    setMenuItems(shakes);
-  };
-
-  const dinnerMenus = () => {
-    const dinner = menudata.filter(
-      (menuArray) => menuArray.category === "dinner"
-    );
-    setMenuItems(dinner);
+    setMenuItems(update);
   };
 
   const allMenus = () => {
@@ -46,16 +25,32 @@ export const Menu = () => {
         <button type="button" className="filter-btn" onClick={allMenus}>
           all
         </button>
-        <button type="button" className="filter-btn" onClick={breakfastMenus}>
+        <button
+          type="button"
+          className="filter-btn"
+          onClick={() => updateMenus("breakfast")}
+        >
           breakfast
         </button>
-        <button type="button" className="filter-btn" onClick={lunchMenus}>
+        <button
+          type="button"
+          className="filter-btn"
+          onClick={() => updateMenus("lunch")}
+        >
           lunch
         </button>
-        <button type="button" className="filter-btn" onClick={shakesMenus}>
+        <button
+          type="button"
+          className="filter-btn"
+          onClick={() => updateMenus("shakes")}
+        >
           shakes
         </button>
-        <button type="button" className="filter-btn" onClick={dinnerMenus}>
+        <button
+          type="button"
+          className="filter-btn"
+          onClick={() => updateMenus("dinner")}
+        >
           dinner
         </button>
       </div>
