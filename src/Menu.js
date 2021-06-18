@@ -12,22 +12,50 @@ export const Menu = () => {
     setMenuItems(breakfast);
   };
 
+  const lunchMenus = () => {
+    const lunch = menudata.filter(
+      (menuArray) => menuArray.category === "lunch"
+    );
+    setMenuItems(lunch);
+  };
+
+  const shakesMenus = () => {
+    const shakes = menudata.filter(
+      (menuArray) => menuArray.category === "shakes"
+    );
+    setMenuItems(shakes);
+  };
+
+  const dinnerMenus = () => {
+    const dinner = menudata.filter(
+      (menuArray) => menuArray.category === "dinner"
+    );
+    setMenuItems(dinner);
+  };
+
+  const allMenus = () => {
+    const all = menudata.map((menuArray) => {
+      return menuArray;
+    });
+    setMenuItems(all);
+  };
+
   return (
     <>
       <div className="btn-container">
-        <button type="button" className="filter-btn">
+        <button type="button" className="filter-btn" onClick={allMenus}>
           all
         </button>
         <button type="button" className="filter-btn" onClick={breakfastMenus}>
           breakfast
         </button>
-        <button type="button" className="filter-btn">
+        <button type="button" className="filter-btn" onClick={lunchMenus}>
           lunch
         </button>
-        <button type="button" className="filter-btn">
+        <button type="button" className="filter-btn" onClick={shakesMenus}>
           shakes
         </button>
-        <button type="button" className="filter-btn">
+        <button type="button" className="filter-btn" onClick={dinnerMenus}>
           dinner
         </button>
       </div>
