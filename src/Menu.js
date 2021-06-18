@@ -13,7 +13,10 @@ export const Menu = () => {
   };
 
   const lunchMenus = () => {
-    console.log("ランチ");
+    const lunch = menudata.filter(
+      (menuArray) => menuArray.category === "lunch"
+    );
+    setMenuItems(lunch);
   };
 
   return (
