@@ -20,7 +20,10 @@ export const Menu = () => {
   };
 
   const shakesMenus = () => {
-    console.log("シェイク");
+    const shakes = menudata.filter(
+      (menuArray) => menuArray.category === "shakes"
+    );
+    setMenuItems(shakes);
   };
 
   return (
