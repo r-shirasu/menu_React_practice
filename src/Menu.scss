@@ -53,6 +53,12 @@ $gold: #c59d5f;
     }
   }
 
+  @media screen and (min-width: 992px) {
+    .section {
+      width: 95vw;
+    }
+  }
+
   .item-info {
     header {
       display: flex;
@@ -82,21 +88,26 @@ $gold: #c59d5f;
 }
 
 @media screen and (min-width: 768px) {
-  .menu-item {
-    grid-template-columns: 225px 1fr;
-    gap: 0 1.25rem;
-    max-width: 40rem;
-  }
-  .photo {
-    height: 175px;
+  .section {
+    .menu-item {
+      grid-template-columns: 225px 1fr;
+      gap: 0 1.25rem;
+      max-width: 40rem;
+      .photo {
+        height: 175px;
+      }
+    }
   }
 }
+
 @media screen and (min-width: 1200px) {
-  .section-center {
+  .section {
     width: 95vw;
     grid-template-columns: 1fr 1fr;
-  }
-  .photo {
-    height: 150px;
+    .menu-item {
+      .photo {
+        height: 150px;
+      }
+    }
   }
 }
